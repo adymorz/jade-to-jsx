@@ -1,0 +1,6 @@
+- var route = this.props.route
+div(className="app")
+	Notifications(ref=e=>this.notifications=e key="notifications")
+	if route.name == "resetpassword"
+		.container.resetpassword
+			= route.render({resetpassword:true,onChangePassword:()=>this.goTo("/tasks",true)})
