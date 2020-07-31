@@ -10,11 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "change-case": "^2.3.0",
-    "falafel": "^1.2.0",
-    "html": "0.0.10",
-    "htmltojsx": "^0.2.5",
+    "change-case": "^4.1.1",
+    "falafel": "^2.2.4",
+    "html": "1.0.0",
+    "htmltojsx": "^0.3.0",
     "jade": "^1.11.0",
-    "nopt": "^3.0.6"
+    "nopt": "^4.0.3"
   }
 }
