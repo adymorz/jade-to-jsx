@@ -164,7 +164,7 @@ module.exports = function (options) {
 
   var output = falafel(res, function (node) {
     if (node.type === 'CallExpression') {
-      if (node.callee.object.name === 'jade' && node.callee.property.name === 'escape') {
+      if (node.callee.object && node.callee.object.name === 'jade' && node.callee.property.name === 'escape') {
         var idNode = node.arguments[0].test.right.right;
         var id;
 
@@ -181,7 +181,7 @@ module.exports = function (options) {
         node.update('"{' + id.replace(/\"/g, '\\\"') + '}"');
       }
 
-      if (node.callee.object.name === 'jade' && node.callee.property.name === 'attr') {
+      if (node.callee.object && node.callee.object.name === 'jade' && node.callee.property.name === 'attr') {
         var attrNode = node.arguments[0];
         var valNode = node.arguments[1];
         var val, attr;
